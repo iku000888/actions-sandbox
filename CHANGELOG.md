@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Features
 
+* tag and push separately from changelog gen ([90bc94f](https://github.com/iku000888/actions-sandbox/commit/90bc94fa145838de941080deddac4bb25b6a3c5f))
+
+## 1.1.0 (2023-06-10)
+
+
+### Features
+
 * version.txt ([c0f6c3f](https://github.com/iku000888/actions-sandbox/commit/c0f6c3f30ae15f6091b556d1bc96a8a93d602408))
 
 ## 1.0.2 (2023-06-10)
