@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "precommit": "remove-snapshot.sh",
+    "posttag": "next-snapshot.sh"
+  },
   "bumpFiles": [
     {
       "filename": "VERSION.txt",
