@@ -4,12 +4,6 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -54,6 +48,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           git push -f origin release-x.x.x
+          git push origin v$(cat VERSION.txt)
 
       - name: Create Pull Request
         uses: actions/github-script@v5
