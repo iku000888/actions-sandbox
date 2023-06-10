@@ -41,4 +41,4 @@ jobs:
           node-version: '16'
 
       - name: Run a one-line script
-        run: npm i --save-dev commit-and-tag-version
+        run: npm i -g commit-and-tag-version
