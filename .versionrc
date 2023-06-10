@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "precommit": "remove-snapshot.sh",
-    "posttag": "next-snapshot.sh"
+    "precommit": "./remove-snapshot.sh",
+    "posttag": "./next-snapshot.sh"
   },
   "bumpFiles": [
     {
