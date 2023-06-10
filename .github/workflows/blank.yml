@@ -34,18 +34,20 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          git checkout release-x.x.x
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.2
         with:
           node-version: '16'
 
-      - name: Run a one-line script
+      - name: commit-and-tag-version
         run: |
           npm i -g commit-and-tag-version
-          commit-and-tag-version
+          commit-and-tag-version -s
+
+      - name: Run a multi-line script
+        run: |
+          git push origin release-x.x.x
