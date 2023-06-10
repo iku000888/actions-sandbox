@@ -37,3 +37,6 @@ jobs:
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.2
+
+      - name: Run a one-line script
+        run: npm i --save-dev commit-and-tag-version
