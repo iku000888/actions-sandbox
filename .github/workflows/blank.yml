@@ -54,3 +54,19 @@ jobs:
       - name: Run a multi-line script
         run: |
           git push -f origin release-x.x.x
+
+      - name: Create Pull Request
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const github = require('@actions/github');
+            const payload = {
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              title: 'Release PR',
+              head: 'release-x.x.x',
+              base: 'main',
+              body: 'This is a release PR. Please check the changes.'
+            }
+            await github.rest.pulls.create(payload);
