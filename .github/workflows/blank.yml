@@ -36,6 +36,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
+          git branch release-x.x.x
           git checkout release-x.x.x
 
       - name: Setup Node.js environment
