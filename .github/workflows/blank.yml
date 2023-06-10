@@ -60,7 +60,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const github = require('@actions/github');
             const payload = {
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
