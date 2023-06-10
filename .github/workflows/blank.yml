@@ -40,3 +40,5 @@ jobs:
 
       - name: Run a one-line script
         run: npm i --save-dev commit-and-tag-version
+        with:
+          node-version: latest
