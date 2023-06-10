@@ -61,8 +61,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const payload = {
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
+              owner: github.repository_owner,
+              repo: github.repository,
               title: 'Release PR',
               head: 'release-x.x.x',
               base: 'main',
