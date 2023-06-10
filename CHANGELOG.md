@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Features
 
+* great feature ([#10](https://github.com/iku000888/actions-sandbox/issues/10)) ([c3de422](https://github.com/iku000888/actions-sandbox/commit/c3de42248b59b486f7b645a3ca4a97e8adfe3589))
+
+## 1.1.0 (2023-06-10)
+
+
+### Features
+
 * tag ([#8](https://github.com/iku000888/actions-sandbox/issues/8)) ([a47ddff](https://github.com/iku000888/actions-sandbox/commit/a47ddff77c91dd851f3337e94fdf4c9340f2944a))
 
 ## 1.1.0 (2023-06-10)
