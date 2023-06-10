@@ -22,5 +22,5 @@ jobs:
         if: steps.commit.outputs.trigger == 'true'
         run: |
           echo "Running job because commit message started with 'chore(release):'"
-          git tag $(cat VERSION.txt)
-          git push origin $(cat VERSION.txt)
+          git tag v$(cat VERSION.txt)
+          git push origin v$(cat VERSION.txt)
