@@ -53,4 +53,4 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          git push origin release-x.x.x
+          git push -f origin release-x.x.x
