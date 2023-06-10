@@ -14,4 +14,4 @@ if [ -e project.clj ]; then
   git add project.clj
 fi
 git add SNAPSHOT_VERSION.txt
-git commit -S -m "chore: prepare next development iteration"
+git commit -m "chore: prepare next development iteration"
