@@ -47,7 +47,7 @@ jobs:
       - name: commit-and-tag-version
         run: |
           npm i -g commit-and-tag-version
-          commit-and-tag-version -s
+          commit-and-tag-version
 
       - name: Run a multi-line script
         run: |
