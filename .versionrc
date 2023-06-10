@@ -3,6 +3,12 @@
     "precommit": "./remove-snapshot.sh",
     "posttag": "./next-snapshot.sh"
   },
+  "packageFiles": [
+    {
+      "filename": "VERSION.txt",
+      "type": "plain-text"
+    }
+  ],
   "bumpFiles": [
     {
       "filename": "VERSION.txt",
