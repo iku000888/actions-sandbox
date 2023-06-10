@@ -58,12 +58,23 @@ jobs:
         uses: actions/github-script@v5
         with:
           script: |
-            const payload = {
+            const branchName = 'release-x.x.x';  // replace with your actual branch name if dynamically generated
+            const { data: prs } = await github.rest.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Release PR',
-              head: 'release-x.x.x',
-              base: 'main',
-              body: 'This is a release PR. Please check the changes.'
+              state: 'open',
+              head: `${context.repo.owner}:${branchName}`
+            });
+            if (!prs.length) {
+              const payload = {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'Release PR',
+                head: branchName,
+                base: 'main',
+                body: 'This is a release PR. Please check the changes.'
+              };
+              await github.rest.pulls.create(payload);
+            } else {
+              console.log('A PR with this branch already exists.');
             }
-            await github.rest.pulls.create(payload);
