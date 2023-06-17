@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.6.1](https://github.com/iku000888/actions-sandbox/compare/v1.6.0...v1.6.1) (2023-06-17)
+
+
+### Bug Fixes
+
+* project.clj snapshot version ([c079aba](https://github.com/iku000888/actions-sandbox/commit/c079aba15dd091d2092e88f40d4d372af33bef11))
+
 ## 1.6.0 (2023-06-17)
 
 
