@@ -7,6 +7,7 @@
 - yet another feature
 - great feature
 - dope feature
+- a fix
 
 ## Fixes
 
