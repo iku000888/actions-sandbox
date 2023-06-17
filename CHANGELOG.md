@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.7.0](https://github.com/iku000888/actions-sandbox/compare/v1.6.1...v1.7.0) (2023-06-17)
+
+
+### Features
+
+* humble feature ([9aafec8](https://github.com/iku000888/actions-sandbox/commit/9aafec8e8981a392a708fb54ce930d1b17f83dbd))
+* shabby feature ([0b42f2c](https://github.com/iku000888/actions-sandbox/commit/0b42f2cc8e2edc500b39e3ec7ada6f8ca1179a56))
+
 ## [1.6.1](https://github.com/iku000888/actions-sandbox/compare/v1.6.0...v1.6.1) (2023-06-17)
 
 
