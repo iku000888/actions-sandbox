@@ -46,9 +46,10 @@ jobs:
         run: |
           npx commit-and-tag-version -a
 
-      - name: Run a multi-line script
+      - name: Push branch and tag
         run: |
           git push -f origin release-x.x.x
+          git push origin v$VERSION.txt
 
       - name: Create Pull Request
         uses: actions/github-script@v5
