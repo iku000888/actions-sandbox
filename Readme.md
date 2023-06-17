@@ -9,6 +9,7 @@
 - dope feature
 - a fix
 - more fix
+- humble feature
 
 ## Fixes
 
