@@ -8,6 +8,7 @@
 - great feature
 - dope feature
 - a fix
+- more fix
 
 ## Fixes
 
