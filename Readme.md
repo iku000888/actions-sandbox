@@ -11,6 +11,7 @@
 - more fix
 - humble feature
 - shabby feature
+- yet another feature
 
 ## Fixes
 
