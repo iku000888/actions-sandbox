@@ -37,10 +37,6 @@ jobs:
           gpg --list-secret-keys --keyid-format LONG
           gpg --armor --export "${{ secrets.GPG_KEY_ID }}"
 
-      - name: Configure Git to sign commits
-        run: |
-          git config --global commit.gpgsign true
-          #git config --global user.signingkey "${{ secrets.GPG_KEY_ID }}"
       - name: fetch tags+chckout release branch
         run: |
           git fetch --tags origin
