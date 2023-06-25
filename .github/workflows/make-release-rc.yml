@@ -40,7 +40,7 @@ jobs:
       - name: Configure Git to sign commits
         run: |
           git config --global commit.gpgsign true
-          git config --global user.signingkey "${{ secrets.GPG_KEY_ID }}"
+          #git config --global user.signingkey "${{ secrets.GPG_KEY_ID }}"
       - name: fetch tags+chckout release branch
         run: |
           git fetch --tags origin
