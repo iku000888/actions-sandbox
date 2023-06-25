@@ -12,6 +12,7 @@
 - humble feature
 - shabby feature
 - sign commit 2
+- unsigned commit
 
 ## Fixes
 
