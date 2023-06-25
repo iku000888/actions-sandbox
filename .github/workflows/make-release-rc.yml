@@ -61,7 +61,6 @@ jobs:
       - name: Push branch and tag
         run: |
           git push -f origin release-x.x.x
-          git push origin v$(cat VERSION.txt)
 
       - name: Create Pull Request
         uses: actions/github-script@v5
