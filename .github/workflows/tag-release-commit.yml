@@ -11,16 +11,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Check commit message
+      - name: Check commit message and maybe tag
         id: commit
         run: |
-          commit_message=$(git log --format=%B -n 3 ${{ github.event.after }})
-          if [[ "$commit_message" == "chore(release):"* ]]; then
-            echo "::set-output name=trigger::true"
+          commit_hash=$(git log --grep="chore(release):" --format=format:%H -n 1)
+          if [[ -n "$commit_hash" ]]; then
+            git tag v$(cat VERSION.txt) $commit_hash
+            git push origin v$(cat VERSION.txt)
           fi
-      - name: Run job based on commit message
-        if: steps.commit.outputs.trigger == 'true'
-        run: |
-          echo "Running job because commit message started with 'chore(release):'"
-          git tag v$(cat VERSION.txt)
-          git push origin v$(cat VERSION.txt)
