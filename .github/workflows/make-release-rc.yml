@@ -37,13 +37,9 @@ jobs:
           gpg --list-secret-keys --keyid-format LONG
           gpg --armor --export "${{ secrets.GPG_KEY_ID }}"
 
-      - name: fetch tags+chckout release branch
+      - name: fetch tags release branch
         run: |
           git fetch --tags origin
-          git checkout v$(cat VERSION.txt)
-          git checkout main
-          git branch release-v$(cat VERSION.txt)
-          git checkout release-v$(cat VERSION.txt)
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.2
@@ -53,6 +49,11 @@ jobs:
       - name: commit-and-tag-version
         run: |
           npx commit-and-tag-version -a
+
+      - name: chckout release branch
+        run: |
+          git branch release-v$(cat VERSION.txt)
+          git checkout release-v$(cat VERSION.txt)
 
       - name: Push branch and tag
         run: |
