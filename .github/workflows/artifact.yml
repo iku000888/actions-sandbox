@@ -1,0 +1,20 @@
+name: Create and Upload Tag File
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload Tag File
+        uses: actions/upload-artifact@v3
+        with:
+          name: Tag File
+          path: VERSION.txt
