@@ -27,4 +27,4 @@ jobs:
         run: |
           echo "Running job because commit message started with 'chore(release):'"
           git tag v$(cat VERSION.txt) ${{ steps.commit.outputs.hash }}
-          git push origin $(cat VERSION.txt)
+          git push origin v$(cat VERSION.txt)
