@@ -1,1 +1,1 @@
-(defproject test/project "1.8.2-SNAPSHOT")
+(defproject test/project "1.9.1-SNAPSHOT")
