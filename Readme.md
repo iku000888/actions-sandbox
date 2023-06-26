@@ -14,6 +14,7 @@
 - sign commit 2
 - unsigned commit
 - yet another feature
+- hello
 
 ## Fixes
 
